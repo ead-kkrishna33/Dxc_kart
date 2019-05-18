@@ -1,0 +1,15 @@
+.centerdiv{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
+.centerdivUser{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left: 42%;
+}

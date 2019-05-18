@@ -1,0 +1,30 @@
+
+<!-- <form>
+    
+        <input type="text" placeholder="username"><br>
+        <input type="text" placeholder="password"><br>
+        <input type="submit" value="Submit">
+        <a href="/register" class="w3-bar-item w3-button w3-padding-smallw3-hide-small">SignUp</a>
+</form> -->
+
+ <div>
+<div class="centerdiv">
+    <img src="./../../assets/userIcon.png" id="profilepic">    
+    
+</div>
+<div class ="centerdivUser">
+        <!-- <span><h6>User Name :</h6  > <input type="text" style="width:100px"/></span> -->
+           <br/>
+           <input [(ngModel)]="username" type="text" placeholder="username"><br/><br/>
+           <input [(ngModel)]="password" type="password" placeholder="password"><br/> <br/>
+           &nbsp; <input type="submit" value="Submit" class ="btn btn-success" (click)="OnLogin()"/>&nbsp;
+           <a href="/register" class="w3-bar-item w3-button w3-padding-smallw3-hide-small">Register</a>
+          <br/>
+          <br/>       
+          {{loginResponse}}
+       
+ </div>
+
+
+</div>
+

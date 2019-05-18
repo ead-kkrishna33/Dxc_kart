@@ -1,0 +1,22 @@
+.size {
+    width: 100vh;
+    height: 50%;
+    align-items: center;
+    align-content: center;
+}
+
+.compSize {
+    height: 50%;
+}
+
+.container{
+    padding-top: 3%;
+    height:60%;
+    width: 80%;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    height: 50%;
+}

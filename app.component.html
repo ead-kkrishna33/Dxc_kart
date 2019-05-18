@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+	
+<!-- nav baar -->
+<div>
+	<div class="w3-bar w3-black w3-card">
+		<div class="w3-left">
+			<a href="/home" class="w3-bar-item w3-button">
+				<!-- <h3 class="w3-red"><i><strong>DXC_KART</strong></i></h3> -->
+				<img src="./../assets/logo.png" id="logo">  
+			</a>
+		</div>		
+		
+		<div class="w3-right" *ngIf ="globalUserName !=''">	
+			
+			<span style="color:white"> Welcome {{globalUserName}}	</span>
+	  		<a [routerLink]="['/products']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">products</a>
+			<a [routerLink]="['/kart']"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Cart</a>
+    			
+		</div>
+		<div class="w3-right" *ngIf ="globalUserName ==''">			
+				<a [routerLink]="['/login']" class=" w3-bar-item w3-button w3-padding-large w3-hide-small">Login</a>
+				<a [routerLink]="['/register']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Register</a>
+				<a [routerLink]="['/products']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">products</a>
+				<a [routerLink]="['/kart']"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Cart</a>
+				
+			</div>
+	</div>
+</div>
+<!-- nav baar -->
+
+		
+<router-outlet></router-outlet>

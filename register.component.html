@@ -1,0 +1,44 @@
+
+<br/>
+<div class="container">
+    <div class="jumbotron">
+       <div class="row">
+
+                        <div class="col-md-6 offset-md-3">
+                           <!-- <form > -->
+                    <div class="form-group">
+                    <label for="username">Username:&nbsp;</label>
+                    <input type [(ngModel)]="Username" type="text"  name="">
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                            <label>Password:&nbsp;&nbsp;</label>
+                            <input [(ngModel)]="Password" type="password" name="">
+                            </div>
+                              <br/>
+                            <div class="form-group">
+                                    <label>Confirm:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input [(ngModel)]="Confirm" type="password" name="">
+                                    </div>
+                                    <br/>
+                                    <div class="">
+                                            <label for="email">Email_id:&nbsp;&nbsp;&nbsp;</label>
+                                            <input [(ngModel)]="Email_id" type="text" name="email">
+                                            </div>
+                    
+                    <br/>
+                                            <div class="form-group">
+                                                    <label for="Contact">Phone no:</label>&nbsp;
+                                                    <input [(ngModel)]="Contact" type="number" name="">
+                                                    </div>
+                                                                                    
+                    <br/>
+                    <input type="submit" name="button" value="Register" class="btn btn-success" (click)="OnSubmit()">
+                    &nbsp;&nbsp; {{errMsg}}
+                        {{responseMsg}}
+                    <!-- </form> -->
+                    </div>
+                    </div>      
+
+    </div>
+</div>

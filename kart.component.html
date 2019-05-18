@@ -1,0 +1,217 @@
+
+<br />
+<div class="container">
+  <div class="row">
+<!-- <div class="col-sm-6">
+    <p>
+        Images
+        <br/>
+        <br/>
+        <br/>
+      </p>
+</div> -->
+<div class="col-sm-6">
+    
+       <b>Product details</b> 
+        <br/>
+        <br/>
+         <ul>
+          <li *ngFor="let order of orders">          
+            {{order.name}} - {{order.brand}} : Rs {{order.price}}
+          </li>
+        </ul>
+       
+       <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Amount : Rs {{totalprice}} </b>
+       <br/>
+       <br/>
+</div>
+  </div>
+  
+
+
+
+
+
+</div>
+<!-- <div class="container">
+    <p>
+      <a class="btn btn-primary" type="button" data-toggle="collapse" aria-expanded="false" href="/buy" role="button"
+        aria-controls="Buy">Proceed to buy</a>
+    </p> -->
+<div class="container">
+  <!-- <div class="collapse multi-collapse" id="Buy">
+        <div class="card card-body"> -->
+  <p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#Address" role="button" aria-expanded="false"
+      aria-controls="Address">Add Address</a>
+
+    <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse"
+          aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button> -->
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="Address">
+        <div class="card card-body">
+
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Full Name</label>
+                <input type="name" class="form-control" id="inputName" placeholder="Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputNumber4">Mobile Number</label>
+                <input type="number" class="form-control" id="inputNumber4" placeholder="Number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputPin">Pincode</label>
+                <input type="text" class="form-control" id="inputPin">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Address</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#payment" aria-expanded="false"
+      aria-controls="payment"> Proceed to Pay</button>
+  </p>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="collapse multi-collapse" id="payment">
+        <div class="card card-body">
+
+          <aside class="col-sm-6">
+            <p>Payment form</p>
+
+            <article class="card">
+              <div class="card-body p-5">
+
+                <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#nav-tab-card">
+                      <i class="fa fa-credit-card"></i> Credit Card</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#nav-tab-cod">
+                      <i class="fa fa-university"></i> COD</a></li>
+
+                </ul>
+
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="nav-tab-card">
+
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="username">Full name (on the card)</label>
+                        <input type="text" class="form-control" name="username" placeholder="" required="">
+                      </div> <!-- form-group.// -->
+
+                      <div class="form-group">
+                        <label for="cardNumber">Card number</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" name="cardNumber" placeholder="">
+                          <div class="input-group-append">
+                            <span class="input-group-text text-muted">
+                              <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i>
+                              <i class="fab fa-cc-mastercard"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div> <!-- form-group.// -->
+
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <div class="form-group">
+                            <label><span class="hidden-xs">Expiration</span> </label>
+                            <div class="input-group">
+                              <input type="number" class="form-control" placeholder="MM" name="">
+                              <input type="number" class="form-control" placeholder="YY" name="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label data-toggle="tooltip" title=""
+                              data-original-title="3 digits code on back side of the card">CVV
+                              <i class="fa fa-question-circle"></i></label>
+                            <input type="number" class="form-control" required="">
+                          </div> <!-- form-group.// -->
+                        </div>
+                      </div> <!-- row.// -->
+                      <button class="subscribe btn btn-primary btn-block" type="button"> Confirm </button>
+                    </form>
+                  </div> <!-- tab-pane.// -->
+                  <div class="tab-pane fade" id="nav-tab-cod">
+                    <p>COD</p>
+                    <!-- <p>
+                              <button type="button" class="btn btn-primary"> <i class="fab fa-university"></i> Log in my Paypal </button>
+                            </p> -->
+                    <p><strong>Note:</strong>Please Provide proper AddressS </p>
+                    <button class="subscribe btn btn-primary btn-block" type="button"> Confirm </button>
+                  </div>
+                  <!-- <div class="tab-pane fade" id="nav-tab-bank">
+                            <p>Bank accaunt details</p>
+                            <dl class="param">
+                              <dt>BANK: </dt>
+                              <dd> THE WORLD BANK</dd>
+                            </dl>
+                            <dl class="param">
+                              <dt>Accaunt number: </dt>
+                              <dd> 12345678912345</dd>
+                            </dl>
+                            <dl class="param">
+                              <dt>IBAN: </dt>
+                              <dd> 123456789</dd>
+                            </dl>
+                            <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> tab-pane.// -->
+                </div> <!-- tab-content .// -->
+
+              </div> <!-- card-body.// -->
+            </article> <!-- card.// -->
+
+          </aside> <!-- col.// -->
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

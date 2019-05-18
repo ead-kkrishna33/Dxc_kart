@@ -1,0 +1,4 @@
+
+a .noHover{
+    pointer-events: none !important;
+}
